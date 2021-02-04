@@ -16,4 +16,4 @@ The style guidelines of [Alle Wetter](https://aw-studio.de).
     -   [Alpine](frameworks/alpine.md)
     -   [Tailwind](frameworks/tailwind.md)
 -   ## Use Cases
-    -   [Litstack Pages](examples/litstack.md)
+    -   [Litstack Pages](examples/litstack-pages.md)
