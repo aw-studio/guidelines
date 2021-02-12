@@ -18,7 +18,7 @@ The files are imported into app.scss in alphabetical order.</p>
 The design (e.g. Sketch) contains and sets the default parameters.</p>
 <p>Example:</p>
 
-<p>The element rules for font family, sizes, weights and colors are collected in a typography.scss file.</p>
+<p>The element rules for font family, sizes, weights, colors and margins are collected in a typography.scss file.</p>
 
 ## Tailwind Config
 
