@@ -66,6 +66,48 @@ class ImprintController {
     }
 }
 ```
+
+## Blade
+
+### Anonymous components
+Use anonymous Blade components if no data needs to be queried from the database. Basic varaible imputs may be solved using the laravel magic.
+Component classes only transfering the data from the constructor to public properties are 
+
+**BAD**
+```php
+class Card extends Component {
+    //...
+    public $title;
+    
+    public function __construct($title = null)
+    {
+        $this->title = $title;
+    }
+    //...
+}
+```
+```blade
+<x-card :title="$card->title" :text="$card->text"/>
+
+//
+
+<div>
+   <h4>{{$title}}</h4>
+   <p>{{$text}}</p>
+</div>
+```
+**GOOD**
+```blade
+<x-card :title="$card->title" :text="$card->text"/>
+
+//
+
+<div>
+   <h4>{{$title}}</h4>
+   <p>{{$text}}</p>
+</div>
+```
+
 ## Other best practies
 
 Follow other generally accepted [best practices for laravel](https://github.com/alexeymezenin/laravel-best-practices).
