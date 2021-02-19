@@ -29,6 +29,43 @@ Config | snake_case | google_calendar.php | ~~googleCalendar.php, google-calenda
 Contract (interface) | adjective or noun | AuthenticationInterface | ~~Authenticatable, IAuthentication~~
 Trait | adjective | Notifiable | ~~NotificationTrait~~
 
+
+## Controller
+
+Follow the Single responsibility principle. A class and a method should have only one responsibility, even if is just outputting a specifc view.
+
+
+**BAD**
+```php
+class PageController {
+    public function home()
+    {
+        return view('home');
+    }
+    
+    public function imprint()
+    {
+        return view('imprint');
+    }
+}
+```
+
+**GOOD**
+```php
+class HomeController {
+    public function index()
+    {
+        return view('home');
+    }
+}
+
+class ImprintController {
+    public function index()
+    {
+        return view('imprint');
+    }
+}
+```
 ## Other best practies
 
 Follow other generally accepted [best practices for laravel](https://github.com/alexeymezenin/laravel-best-practices).
